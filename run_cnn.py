@@ -183,8 +183,8 @@ def test():
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2 or sys.argv[1] not in ['train', 'test']:
-        raise ValueError("""usage: python run_cnn.py [train / test]""")
+    # if len(sys.argv) != 2 or sys.argv[1] not in ['train', 'test']:
+    #     raise ValueError("""usage: python run_cnn.py [train / test]""")
 
     print('Configuring CNN model...')
     config = TCNNConfig()
@@ -195,7 +195,9 @@ if __name__ == '__main__':
     config.vocab_size = len(words)
     model = TextCNN(config)
 
-    if sys.argv[1] == 'train':
-        train()
-    else:
-        test()
+    # if sys.argv[1] == 'train':
+    #     train()
+    # else:
+    #     test()
+    train()
+    test()
